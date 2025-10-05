@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Navigation Bar */
+        body {
+            margin: 0;
+            min-height: 100vh;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            background-image: url(./project_wallpaper.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        ul {
+            display: flex;
+            justify-content: start;
+            list-style-type: none;
+        }
+
+        ul li {
+            border-right: 1px solid black;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        nav {
+            position: fixed;
+            background-color: white;
+            top: 0;
+            width: 100%;
+            box-shadow: 0px 4px 15px gray;
+            z-index: 10;
+            font-size: 25px;
+        }
+        .elem:hover a{
+            color: white;
+            background-color: black;
+        }
+        .elem a {
+            color: black;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        /* Main content starts */
+        .main {
+            display: flex;
+            flex: 1;
+            justify-content: start;
+            padding-top: 0px;
+            font-size: 30px;
+        }
+        h2 {
+            padding-top: 60px;
+            font-size: 40px;
+            margin-left: 20px;
+        }
+        .project-board {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            height: 1140px;
+            width: 1020px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            background-color: darkgray;
+            border-radius: 30px;
+            box-shadow: 4px 4px 20px gray;
+            gap: 30px;
+            padding: 30px;
+        }
+        .card {
+            display: flex;
+            flex-direction: column;
+            height: 340px;
+            width: 300px;
+            border-radius: 30px;
+            background-color: white;
+            box-shadow: 4px 4px 15px gray;
+            text-align: center;
+            justify-content: start;
+            transition-duration: .3s;
+        }
+        .card:hover {
+            transform: scale(1.1);
+        }
+        /* Footer content */
+        footer {
+            height: 100%;
+            width: 100vw;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .copyright {
+            color: white;
+            margin-left: 10px;
+            margin-right: 20px;
+            font-size: 20px;
+        }
+
+        .logos {
+            display: flex;
+            align-items: center;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .logos div {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition-duration: 0.2s;
+        }
+        .logos div:hover {
+            transform: translateY(-10px);
+        }
+
+        .logos img {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+        }
+
+
+        a {
+            color: initial;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        video {
+            border-radius: 20px;
+        }
+        span {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 2px;
+            margin-right: 5px;
+            font-size: 18px;
+        }
+        span>a {
+            color: blue;
+        }
+        .card img {
+            width: 300px;
+            height: 168.75px;
+            border-radius: 20px;
+        }
+        @media (max-width: 600px) {
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+            }
+            .footer {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><div class = "elem"><a href="./index.html">Home</a></div></li>
+                    <li><div class = "elem"><a href="./about.html">About</a></div></li>
+                    <li><div class = "elem"><a href="./projects.html">Projects</a></div></li>
+                    <li><div class = "elem"><a href="./contact.html">Contact</a></div></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <h2>My Projects</h2>
+    <div class="main">
+        
+        <div class = "project-board">
+            <div class="card">
+                <img src = "grid.png">
+                <span>This is a grid activity showing different sorts of boxes, some of which span over multiple columns or rows.
+                    <a href = "https://github.com/CoderThatsLockedIn/WebDevActivities/blob/main/grid.html">GitHub link</a>
+                </span>
+            </div>
+            <div class="card"><video src = "planetary_orbit.mp4" controls autoplay muted></video>
+                <span>This is an activity I did on C.S.S. Animations and Keyframes to simulate the orbit
+                    of the moon around the Earth.
+                    <a href = "https://github.com/CoderThatsLockedIn/WebDevActivities/blob/main/moon_orbit.html">GitHub link</a>
+                </span>
+            </div>
+            <div class="card">
+                <img src = "activity1.png">
+                <span>This is one of my first creations in H.T.M.L., a form. It takes user inputs such as name, email, phone number, etc.
+                    like your typical Google forms.
+                    <a href = "https://github.com/CoderThatsLockedIn/WebDevActivities/blob/main/contact_form.html">GitHub link</a>
+                </span>
+            </div>
+            <div class="card">
+                <img src = "rhombus.png">
+                <span>I created a Rhombus using H.T.M.L. and C.S.S.. It isn't your 
+                    typical shape that you can create directly; you'll need to use the <i>clip-path: polygon()</i> in order to create this.
+                    <a href = "https://github.com/CoderThatsLockedIn/WebDevActivities/blob/main/rhombus.html">GitHub link</a>
+                </span>
+            </div>
+            <div class="card">
+                <video src = "ferrisWheel.mp4" controls autoplay muted></video>
+                <span>A ferris wheel created using H.T.M.L. and C.S.S..
+                    <a href = "https://github.com/CoderThatsLockedIn/WebDevActivities/blob/main/ferrisWheel.html">GitHub link</a>
+                </span>
+                
+            </div>
+            <div class="card">
+                <img src = "recipe.png">
+                <span>A pancakes recipe customised using H.T.M.L. and C.S.S..
+                    <a href = "https://github.com/CoderThatsLockedIn/WebDevActivities/blob/main/recipe.html">GitHub link</a>
+                </span>
+            </div>
+            <div class="card">
+                <video src = "contact_card.mp4" controls autoplay muted></video>
+                <span>A contact card that I created. It is responsive, meaning the card layout will adjust by itself for different devices.
+                    <a href = "https://github.com/CoderThatsLockedIn/WebDevActivities/blob/main/contact_card.html">GitHub link</a>
+                </span>
+            </div>
+            <div class="card">
+                <img src = "circle.png">
+                <span>Yes, you can create circles in C.S.S.. Rest assured, I did not try to create the Japanese flag :)
+                    <a href = "https://github.com/CoderThatsLockedIn/WebDevActivities/blob/main/circle.html">GitHub link</a>
+                </span>
+            </div>
+            <div class="card">
+                <img src = "dog-gallery.png">
+                <span>Created a dog gallery using HTML and CSS in a grid-display.
+                    <a href = "https://github.com/CoderThatsLockedIn/WebDevActivities/blob/main/dog-gallery.html">GitHub link</a>
+                </span>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="copyright">
+            <p>© Copyright: Akshay Sharma, 2025</p>
+        </div>
+        <div class="logos">
+            <a href="https://discord.com/users/771100342506750003">
+                <div><img src="discord.png"></div>
+            </a>
+            <a href="https://www.instagram.com/that_gojo.satoru">
+                <div><img src="instagram.jpg"></div>
+            </a>
+            <a href="https://www.youtube.com/@0V3R_TH3_T0P">
+                <div><img src="youtube.png"></div>
+            </a>
+            <a href="www.linkedin.com/in/akshay-sharma-a540a9377">
+                <div><img src="linkedin.png"></div>
+            </a>
+            <a href="https://x.com/HalaMadridZZ5">
+                <div><img src="download.png"></div>
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>

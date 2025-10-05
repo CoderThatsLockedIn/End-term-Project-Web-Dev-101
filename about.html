@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Navigation Bar */
+        body {
+            margin: 0;
+            min-height: 100vh;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            background-image: url(./project_wallpaper.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        ul {
+            display: flex;
+            justify-content: start;
+            list-style-type: none;
+        }
+
+        ul li {
+            border-right: 1px solid black;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        nav {
+            position: fixed;
+            background-color: white;
+            top: 0;
+            width: 100%;
+            box-shadow: 0px 4px 15px gray;
+            z-index: 10;
+            font-size: 25px;
+        }
+        .elem:hover a{
+            color: white;
+            background-color: black;
+        }
+        .elem a {
+            color: black;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        /* Main content starts */
+        .main {
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            padding-top: 80px;
+            font-size: 30px
+        }
+
+        /* Footer content */
+        footer {
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .copyright {
+            color: white;
+            margin-left: 10px;
+            margin-right: 20px;
+            font-size: 20px;
+        }
+
+        .logos {
+            display: flex;
+            align-items: center;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .logos div {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition-duration: 0.3s;
+        }
+
+        .logos img {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+        }
+
+
+        a {
+            color: initial;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .bars {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .progress-bar {
+            height: 30px;
+            width: 300px;
+            background-image: linear-gradient(to right, red, orange, yellow, green);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            position: relative;
+        }
+
+        .line {
+            height: 30px;
+            width: 2px;
+            background-color: blue;
+            margin: 0px;
+        }
+
+        .one .line {
+            margin-left: 120px;
+        }
+
+        .two .line {
+            margin-left: 180px;
+        }
+
+        .three .line {
+            margin-left: 105px;
+        }
+
+        .divider {
+            height: 30px;
+            width: 1px;
+            background-color: black;
+            position: absolute;
+        }
+
+        .first {
+            left: 75px;
+        }
+
+        .second {
+            margin-left: 150px;
+        }
+
+        .third {
+            margin-left: 225px;
+        }
+        .box {
+            height: 30px;
+            width: 30px;
+        }
+        .red {
+            background-color: red;
+        }
+        
+        .orange {
+            background-color: orange;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+        .green {
+            background-color: green;
+        }
+        .blue {
+            background-color: blue;
+        }
+        table {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 2px solid black;
+            padding: 10px;
+        }
+        .logos div:hover {
+            transform: translateY(-10px);
+        }
+        @media (max-width: 600px) {
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+            }
+            .footer {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+            <nav>
+                <ul>
+                    <li><div class = "elem"><a href = "./index.html">Home</a></div></li>
+                    <li><div class = "elem"><a href = "./about.html">About</a></div></li>
+                    <li><div class = "elem"><a href = "./projects.html">Projects</a></div></li>
+                    <li><div class = "elem"><a href = "./contact.html">Contact</a></div></li>
+                </ul>
+            </nav>
+    </header>
+    <div class="main">
+        <article>
+            <h2>About Me</h2>
+            <p>My name is Akshay Sharma.<br>
+                I like watching sports such as Formula 1 and football.<br>
+                I like watching anime too!<br>
+                I'm currently learning Java, Maths, HTML, CSS and JavaScript.<br>
+                I'm experienced with Python and SQL too.<br>
+                I enjoy exercising at the gym!<br>
+            </p>
+            <h3>Here's how I rank<br>
+                my progress in each subject
+            </h3>
+            <div class="bars">
+                <label for="Java">Java</label>
+                <div class="progress-bar one" id="Java">
+                    <div class="divider first"></div>
+                    <div class="divider second"></div>
+                    <div class="divider third"></div>
+                    <div class="line"></div>
+                </div>
+                <label for="Maths">Maths</label>
+                <div class="progress-bar two" id="Maths">
+                    <div class="divider first"></div>
+                    <div class="divider second"></div>
+                    <div class="divider third"></div>
+                    <div class="line"></div>
+                </div>
+                <label for="wed-dev">Web Development</label>
+                <div class="progress-bar three" id="wed-dev">
+                    <div class="divider first"></div>
+                    <div class="divider second"></div>
+                    <div class="divider third"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <table>
+                <caption>Legend</caption>
+                <thead>
+                        <tr>
+                            <td>Color</td>
+                            <td>Meaning</td>
+                        </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class = "box red"></div>
+                        </td>
+                        <td>Just starting out</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class = "box orange"></div>
+                        </td>
+                        <td>Beginner</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class = "box yellow"></div>
+                        </td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class = "box green"></div>
+                        </td>
+                        <td>Advanced</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class = "box blue"></div>
+                        </td>
+                        <td>Where I stand</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+        </article>
+    </div>
+    <footer>
+        <div class="copyright">
+            <p>© Copyright: Akshay Sharma, 2025</p>
+        </div>
+        <div class="logos">
+            <a href="https://discord.com/users/771100342506750003">
+                <div><img src="discord.png"></div>
+            </a>
+            <a href="https://www.instagram.com/that_gojo.satoru">
+                <div><img src="instagram.jpg"></div>
+            </a>
+            <a href="https://www.youtube.com/@0V3R_TH3_T0P">
+                <div><img src="youtube.png"></div>
+            </a>
+            <a href="www.linkedin.com/in/akshay-sharma-a540a9377">
+                <div><img src="linkedin.png"></div>
+            </a>
+            <a href="https://x.com/HalaMadridZZ5">
+                <div><img src="download.png"></div>
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            min-height: 100vh;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            background-image: url("./project_wallpaper.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        ul {
+            display: flex;
+            justify-content: start;
+            list-style-type: none;
+        }
+
+        ul li {
+            border-right: 1px solid black;
+            padding: 5px;
+        }
+        
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            position: fixed;
+            background-color: white;
+            top: 0;
+            width: 100%;
+            box-shadow: 0px 4px 15px gray;
+            z-index: 10;
+            font-size: 25px;
+            
+        }
+        .elem:hover a{
+            color: white;
+            background-color: black;
+        }
+        .elem a {
+            color: black;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        /* Main content starts */
+        .main {
+            display: flex;
+            flex: 1;
+            justify-content: start;
+            padding-top: 80px;
+            font-size: 30px;
+            gap: 300px;
+        }
+        section img {
+            height: 150px;
+            width: 150px
+        }
+
+        section div {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+        }
+
+        section p {
+            margin-left: 30px;
+            margin-top: 1px;
+            font-size: 30px;
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            font-size: 30px;
+        }
+
+        footer {
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .copyright {
+            color: white;
+            margin-left: 10px;
+            margin-right: 20px;
+            font-size: 20px;
+        }
+
+        .logos {
+            display: flex;
+            align-items: center;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .logos div {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition-duration: 0.3s;
+        }
+        .logos div:hover {
+            transform: translateY(-10px);
+        }
+        .logos img {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+        }
+        a {
+            color: initial;
+            text-decoration: none;
+            cursor: pointer;
+
+        }
+        button {
+            height: 30px;
+            width: 150px;
+            font-size: 15px;
+            border-radius: 10px;
+            background-color: black;
+            transition-duration: 0.3s;
+            border-color: white;
+        }
+        button:hover {
+            transform: scale(1.05);
+            background-color: white;
+            border-color: black;
+        }
+        button a {
+            color: white;
+        }
+        button:hover a {
+            color: black;
+        }
+        @media (max-width: 600px) {
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+            }
+            .footer {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+            <nav>
+                <ul>
+                    <li><div class = "elem"><a href = "./index.html">Home</a></div></li>
+                    <li><div class = "elem"><a href = "./about.html">About</a></div></li>
+                    <li><div class = "elem"><a href = "./projects.html">Projects</a></div></li>
+                    <li><div class = "elem"><a href = "./contact.html">Contact</a></div></li>
+                </ul>
+            </nav>
+    </header>
+    <!-- Main content -->
+    <div class = "main">
+        <section>
+            <div>
+                <img src="./images.png">
+                <p>Akshay Sharma,<br>
+                    Frontend Developer
+                </p>
+            </div>
+        </section>
+        <article>
+            <h2>Home</h2>
+            <p>Hello! My name is Akshay Sharma<br>
+                and I'm just a person who's trying his<br>
+                best!<br>
+            </p>
+            <button><a href = "./projects.html">View My Work</a></button>
+        </article>
+    </div>
+    <footer>
+        <div class="copyright">
+            <p>© Copyright: Akshay Sharma, 2025</p>
+        </div>
+        <div class="logos">
+            <a href="https://discord.com/users/771100342506750003">
+                <div><img src="discord.png" alt="Discord"></div>
+            </a>
+            <a href="https://www.instagram.com/that_gojo.satoru">
+                <div><img src="instagram.jpg" alt="Instagram"></div>
+            </a>
+            <a href="https://www.youtube.com/@0V3R_TH3_T0P">
+                <div><img src="youtube.png" alt="YouTube"></div>
+            </a>
+            <a href="https://www.linkedin.com/in/akshay-sharma-a540a9377">
+                <div><img src="linkedin.png" alt="LinkedIn"></div>
+            </a>
+            <a href="https://x.com/HalaMadridZZ5">
+                <div><img src="download.png" alt="X"></div>
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>
